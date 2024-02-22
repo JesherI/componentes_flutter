@@ -6,7 +6,7 @@ class AppTheme {
   //Constante de color primario
   static const primaryColor = Color.fromARGB(255, 255, 0, 0);
   //Cosnatnate de color secundario
-  static const secondaryColor = Color.fromARGB(155, 0, 0, 0);
+  static const secondaryColor = Color.fromARGB(155, 115, 116, 114);
   //constante de color de fondo
   static const backColor = Color.fromARGB(218, 253, 213, 193);
   //Constante de tema
