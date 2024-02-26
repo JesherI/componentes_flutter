@@ -22,8 +22,14 @@ class HomeScreen extends StatelessWidget {
             ),
             subtitle: Text('Introduciendo valores',
                 style: AppTheme.lightTheme.textTheme.bodySmall),
-            leading: const Icon(Icons.input),
-            trailing: const Icon(Icons.arrow_circle_right_rounded),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.input),
+            ),
+            trailing: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.arrow_circle_right_rounded),
+            ),
             onTap: () {
               final ruta1 = MaterialPageRoute(
                 builder: (context) {
@@ -41,8 +47,14 @@ class HomeScreen extends StatelessWidget {
             ),
             subtitle: Text('Lista con scroll infinito',
                 style: AppTheme.lightTheme.textTheme.bodySmall),
-            leading: const Icon(Icons.list),
-            trailing: const Icon(Icons.arrow_circle_right_rounded),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.list),
+            ),
+            trailing: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.arrow_circle_right_rounded),
+            ),
             onTap: () {
               final ruta1 = MaterialPageRoute(
                 builder: (context) {
@@ -60,8 +72,14 @@ class HomeScreen extends StatelessWidget {
             ),
             subtitle: Text('Mostrar una notificación',
                 style: AppTheme.lightTheme.textTheme.bodySmall),
-            leading: const Icon(Icons.notification_add),
-            trailing: const Icon(Icons.arrow_circle_right_rounded),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.notification_add),
+            ),
+            trailing: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.arrow_circle_right_rounded),
+            ),
             onTap: () {
               final ruta1 = MaterialPageRoute(
                 builder: (context) {
