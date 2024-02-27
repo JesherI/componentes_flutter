@@ -8,7 +8,8 @@ class AppTheme {
   //Cosnatnate de color secundario
   static const secondaryColor = Color.fromARGB(155, 0, 0, 0);
   //constante de color de fondo
-  static const backColor = Color.fromARGB(218, 219, 163, 163);
+  static const backColor = Color.fromARGB(238, 237, 239, 240);
+  static const backColor2 = Color.fromARGB(236, 46, 46, 46);
   //Constante de tema
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: backColor,
@@ -59,6 +60,11 @@ class AppTheme {
         // decorationColor: primaryColor,
         // decorationStyle: TextDecorationStyle.wavy,
         // decorationThickness: 3.0,
+      ),
+      headlineMedium: GoogleFonts.montserrat(
+        color: secondaryColor,
+        fontSize: 21.5,
+        fontWeight: FontWeight.bold,
       ),
     ),
   );

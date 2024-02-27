@@ -9,6 +9,8 @@ class InputsScreen extends StatefulWidget {
 }
 
 class _InputsScreenState extends State<InputsScreen> {
+  bool switchValue = false; // controlar el widget switch
+  double sliderValue = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,29 +18,87 @@ class _InputsScreenState extends State<InputsScreen> {
         title: const Text('Entradas'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Text(
             'Entradas',
             style: AppTheme.lightTheme.textTheme.headlineLarge,
           ),
-          Row(
+          entradaNombre(),
+          entradaSwitch(),
+          entradaSlider(),
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               ElevatedButton(
                 onPressed: null,
-                child: Text('Regreasar',
-                    style: AppTheme.lightTheme.textTheme.bodySmall),
+                child: Text('Regreasar'),
               ),
               ElevatedButton(
                 onPressed: null,
-                child: Text('Ventana de Datos',
-                    style: AppTheme.lightTheme.textTheme.bodySmall),
+                child: Text('Ventana de Datos'),
               ),
             ],
           ),
         ],
       ),
+    );
+  }
+
+  TextField entradaNombre() {
+    return TextField(
+      style: AppTheme.lightTheme.textTheme.headlineMedium,
+      decoration: InputDecoration(
+        border: const UnderlineInputBorder(),
+        labelText: 'Escribe tu nombre: ',
+        labelStyle: AppTheme.lightTheme.textTheme.headlineLarge,
+      ),
+    );
+  }
+
+  Row entradaSwitch() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          '¿Te gusta Flutter?',
+          style: AppTheme.lightTheme.textTheme.headlineLarge,
+        ),
+        Switch(
+            value: switchValue,
+            onChanged: (value) {
+              setState(() {
+                switchValue = value;
+              });
+            })
+      ],
+    );
+  }
+
+  Column entradaSlider() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          'Indica qué tanto te gusta Fluter: ',
+          style: AppTheme.lightTheme.textTheme.headlineLarge,
+        ),
+        Slider(
+          min: 0.0,
+          max: 10,
+          divisions: 10,
+          label: '${sliderValue.round()}',
+          activeColor: AppTheme.secondaryColor,
+          thumbColor: AppTheme.primaryColor,
+          inactiveColor: AppTheme.backColor2,
+          value: sliderValue,
+          onChanged: (value) {
+            setState(() {
+              sliderValue = value;
+            });
+          },
+        )
+      ],
     );
   }
 }
