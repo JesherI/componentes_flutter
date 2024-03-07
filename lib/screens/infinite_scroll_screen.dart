@@ -10,8 +10,10 @@ class InfiniteScrollScreen extends StatefulWidget {
 class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('ventana con una lista infinita'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Scroll'),
+      ),
     );
   }
 }
