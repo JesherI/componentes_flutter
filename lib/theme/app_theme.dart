@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  //Constante de color primario
   static const primaryColor = Color.fromARGB(255, 255, 0, 0);
   //Cosnatnate de color secundario
   static const secondaryColor = Color.fromARGB(155, 0, 0, 0);

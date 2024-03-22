@@ -115,8 +115,11 @@ class HomeScreen extends StatelessWidget {
               Navigator.push(context, ruta1);
             },
           ),
+          const Divider(),
         ],
       ),
     );
   }
 }
+
+
